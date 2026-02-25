@@ -1,20 +1,69 @@
-# Tuplas
-mi_tupla = (2, 4)
-print("Mi tupla: ",mi_tupla)
+#Loops
 
+mi_lista = [1,2,3,4,5]
 
-# Lista
-mi_lista = [1, 3.1416, "Alejandro",mi_tupla]
-print("El primer elemento de mi lista: ",mi_lista(0))
-print("El cuarto elemento de mi lista: ",mi_lista(3))
-print("El tercer elemento de mi lista: ",mi_lista(2))
+for i in mi_lista:
+    print("El numero es:", i)
 
+    resultado = 0
+    for i in mi_lista:
+        resultado += i
 
-# Diccionarios
-mi_diccionario = {"Mi lista":mi_lista,
-                  "Nombre": "Alejandro",
-                  "Pi": 3.1416,
-                  "Tel": "6648212766"}
-print("Llave para accesar a mi diccionario mi_lista", mi_diccionario["mi_lista"])
-print("Llave para accesar a mi diccionario", mi_diccionario["Pi"])
-print("Llave para accesar a mi diccionario Tel",mi_diccionario["Tel"])
+        print(f"El resultado de la suma de mi lista es: {resultado}")
+
+        for i in range(2, 9):
+             print(i)
+
+    mi_lista_2 = ["Lunes" , "Martes", "Miercoles", "Jueves", "Viernes"]
+
+for i in mi_lista_2:
+    if i != "Lunes":
+            print(f"Feliz{i}!")
+
+# While loop
+i = 0
+
+while i < 5:
+     i += 1
+     if i == 3:
+          continue
+     print(i)
+     if i == 4:
+          break
+     
+else:
+     print("i es ahora mayor o igual a 5")
+
+     #practica
+     # Dada la lista mi_lista_2 = ["Lunes" , "Martes", "Miercoles", "Jueves", "Viernes"]
+# Imprime cada elemento de la lista 3 veces y cuando sea lunes no lo incluyas
+# Pista: Usalos dos tipos loops while y for en el mismo programa para lograrlo
+# Resultado:
+# martes
+# miercoles
+# jueves 
+# viernes 
+# martes
+# miercoles 
+# jueves
+# viernes
+# martes
+# miercoles
+# jueves
+# viernes
+mi_lista_2 = ["lunes", "martes", "miercoles", "jueves", "viernes"]
+
+# Inicializamos un contador para el bucle while
+repeticiones = 0
+
+# El bucle while se encargará de repetir todo el proceso 3 veces
+while repeticiones < 3:
+    # El bucle for recorre cada elemento de la lista
+    for dia in mi_lista_2:
+        # Usamos un condicional para saltarnos el "lunes"
+        if dia != "lunes":
+            print(dia)
+    
+    # Incrementamos el contador para no crear un bucle infinito
+    repeticiones += 1
+
